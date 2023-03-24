@@ -423,6 +423,11 @@ lodash@^4.17.21:
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+mime@1.2.5:
+  version "1.2.5"
+  resolved "https://registry.npmjs.org/mime/-/mime-1.2.5.tgz"
+  integrity sha512-QfwTOA+zRHSZXxl9Y7ue5ifKDhU1prnh0dO67Vgcl7Lcx0+79vL9A1ln0qtVur8CFSdYq5Zhnw9DDZQgwDh8Ng==
+
 mock-socket@^9.2.1:
   version "9.2.1"
   resolved "https://registry.npmjs.org/mock-socket/-/mock-socket-9.2.1.tgz"
@@ -457,15 +462,42 @@ node-fetch@^3.3.1:
     fetch-blob "^3.1.4"
     formdata-polyfill "^4.0.10"
 
+optimist@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/optimist/-/optimist-0.3.1.tgz"
+  integrity sha512-SlvDwWll6UznuRvu5kxmlskndLf8GPbTFr75XYWkbmDdDL3HZWnsUqUbniXCpWlJnsIxJ5ZKKy0DOfL0i2RCRA==
+  dependencies:
+    wordwrap ">=0.0.1 <0.1.0"
+
 pako@^2.0.4:
   version "2.1.0"
   resolved "https://registry.npmjs.org/pako/-/pako-2.1.0.tgz"
   integrity sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==
 
+progress@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/progress/-/progress-0.0.4.tgz"
+  integrity sha512-D91pHw+l8w46yr1/UNAdjXRbDu4bKxR4DZQV3yosuX7osMR54SNewCfhg2LWqjb1Q1cCUSz0nJ15WDFG1w5BIQ==
+
 propagate@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/propagate/-/propagate-2.0.1.tgz"
   integrity sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==
+
+req@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/req/-/req-0.1.4.tgz"
+  integrity sha512-5CyYTI61GMT89nePHyeblTaMWYiVhTxkJdix4qXbeor8RffiPB9qELEUHzzeFudlKeoSuDczomfKq11e/kyz+A==
+  dependencies:
+    mime "1.2.5"
+    optimist "0.3.1"
+    progress "0.0.4"
+    request "2.9.202"
+
+request@2.9.202:
+  version "2.9.202"
+  resolved "https://registry.npmjs.org/request/-/request-2.9.202.tgz"
+  integrity sha512-3tc+z/Mcu5Ux4WCZ2dh3F/h7EghvlTQNr0OeplFt09gOCbSZ8MZpHwWIjX/s6I8CsineNvUBGG4/QUNLSC9nKg==
 
 rxjs@^7.8.0:
   version "7.8.0"
@@ -496,6 +528,11 @@ web-streams-polyfill@^3.0.3:
   version "3.2.1"
   resolved "https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
+
+"wordwrap@>=0.0.1 <0.1.0":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz"
+  integrity sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw==
 
 ws@^8.13.0, ws@^8.8.1:
   version "8.13.0"
