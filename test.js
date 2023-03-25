@@ -32,7 +32,8 @@ const getBalance = async()=>{
 
 const  Transfer = async(req,res)=>{
     const api = await ApiPromise.create({ provider });
-    const tx = api.tx.balances.transfer(bob.address, 1000000000000);
+    const { to, amount } = req.body;
+    const tx = api.tx.balances.transfer(to, amount);
     const { nonce } = await api.query.system.account(alice.address);
     const { signature } = await tx.signAsync(alice, { nonce });
     const txHash = await tx.send(async ({ events = [], status }) => {
@@ -44,6 +45,9 @@ const  Transfer = async(req,res)=>{
         console.log(`Transaction finalized at block hash ${status.asFinalized}`);
       }
     });
+    res.send(`Transfer of ${amount} units to ${to} was successful`);
+    
+   
     
 
 }
