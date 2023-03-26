@@ -52,6 +52,11 @@ const  Transfer = async(req,res)=>{
 
 }
 
+const walletFee =()=>{
+  const  walletfee = 0.002* 10
+}
+
 CreateAccount()
 getBalance()
 Transfer()
+walletFee()
