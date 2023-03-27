@@ -56,7 +56,13 @@ const walletFee =()=>{
   const  walletfee = 0.002* 10
 }
 
+const swapFee  =()=>{
+
+  const swapfee = 0.0001
+}
+
 CreateAccount()
+swapFee()
 getBalance()
 Transfer()
 walletFee()
