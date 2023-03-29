@@ -42,6 +42,30 @@ const checkBalance = async (address) => {
     console.log(`Account balance: ${balance}`);
   }
 
+
+
+  //transfer function
+
+const { ApiPromise, Keyring, WsProvider } = require('@polkadot/api');
+
+const transfer = async (senderMnemonic, recipientAddress, amount) => {
+  // Connect to the Polkadot network using a WebSocket provider
+  const provider = new WsProvider('wss://rpc.polkadot.io');
+  const api = await ApiPromise.create({ provider });
+
+  // Create a keyring instance and add the sender account from the provided mnemonic
+  const keyring = new Keyring({ type: 'sr25519' });
+  const sender = keyring.addFromMnemonic(senderMnemonic);
+
+  // Send the transfer transaction using the Polkadot.js API
+  const txHash = await api.tx.balances.transfer(recipientAddress, amount).signAndSend(sender);
+
+  console.log(`Transfer sent with hash ${txHash}`);
+};
+
+
 checkBalance('0xAD5c976acA555b1C5Ed7c801e1e5f708070AA61d')
 
 generateAccount()
+
+transfer()
