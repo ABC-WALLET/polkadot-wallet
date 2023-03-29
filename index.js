@@ -26,4 +26,22 @@ const generateAccount = async()=>{
     
 }
 
+// const getBalance = async()=>{
+//     const { data: { free: balance } } = await api.query.system.account(alice.address);
+//     console.log(`Alice's balance is ${balance} units`);
+    
+
+
+
+// }
+
+const checkBalance = async (address) => {
+    const provider = new WsProvider('wss://rpc.polkadot.io');
+    const api = await ApiPromise.create({ provider });
+    const { data: { free: balance } } = await api.query.system.account(address);
+    console.log(`Account balance: ${balance}`);
+  }
+
+checkBalance('0xAD5c976acA555b1C5Ed7c801e1e5f708070AA61d')
+
 generateAccount()
