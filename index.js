@@ -2,7 +2,7 @@
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
 const connect = async () => {
-    const wsProvider = new WsProvider('wss://test.azero.dev');
+    const wsProvider = new WsProvider('wss://rpc.polkadot.io');
     const api = new ApiPromise({ provider: wsProvider });
     return api.isReady;
 };
@@ -33,10 +33,10 @@ const generateAccount = async()=>{
 
 
 
-// }
+// // }
 
 // const checkBalance = async (address) => {
-//     const provider = new WsProvider('wss://rpc.polkadot.io');
+//     const provider = new WsProvider('wss://westend-rpc.polkadot.io');
 //     const api = await ApiPromise.create({ provider });
 //     const { data: { free: balance } } = await api.query.system.account(address);
 //     console.log(`Account balance: ${balance}`);
@@ -46,11 +46,11 @@ const generateAccount = async()=>{
 
 //   //transfer function
 
-// // const { ApiPromise, Keyring, WsProvider } = require('@polkadot/api');
+
 
 // const transfer = async (senderMnemonic, recipientAddress, amount) => {
 //   // Connect to the Polkadot network using a WebSocket provider
-//   const provider = new WsProvider('wss://rpc.polkadot.io');
+//   const provider = new WsProvider('wss://westend-rpc.polkadot.io');
 //   const api = await ApiPromise.create({ provider });
 
 //   // Create a keyring instance and add the sender account from the provided mnemonic
