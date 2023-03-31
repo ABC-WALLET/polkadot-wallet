@@ -26,7 +26,7 @@ const getBalance = async (address)=>{
     const api = await ApiPromise.create({ provider });
     const { data: { free: balance } } = await api.query.system.account(address);
     console.log(`Account balance: ${balance}`);
-
+//balance
 }
 
 generateAccount()
