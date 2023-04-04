@@ -35,6 +35,7 @@ const getBalance = async (address)=>{
 //     const api = await ApiPromise.create({ provider: wsProvider });
 
 
+
 //     // Initialize account from the mnemonic
 //     const keyring = new Keyring({type: 'sr25519'});
 //     const sender = keyring.addFromMnemonic(senderPKEY);
@@ -92,11 +93,11 @@ const polkadotTransfer = async (senderPKEY, recipientPKEY, txAmount) => {
     console.log("Transaction hash:", hash.toHex());
     console.log("Explorer link:", `${explorerUrl}extrinsic/${hash.toHex()}`);
 
-    // // Return transaction hash and link to explorer
-    // return {
-    //     hash: hash.toHex(),
-    //     explorerLink: `${explorerUrl}extrinsic/${hash.toHex()}`
-    // };
+    // Return transaction hash and link to explorer
+    return {
+        hash: hash.toHex(),
+        explorerLink: `${explorerUrl}extrinsic/${hash.toHex()}`
+    };git
 }
 
 generateAccount()
