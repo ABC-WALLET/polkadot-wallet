@@ -83,6 +83,11 @@ contract DAO is Ownable, ReentrancyGuard {
         emit NewProposal(newProposal.id, newProposal.title);
     }
 
+struct{
+    uint256 id;
+    string memberName;
+    uint256 balance;
+}
     function vote(uint256 _proposalId, bool _support) public onlyMember nonReentrant {
         Proposal storage proposal = proposals[_proposalId];
         require(block.timestamp < proposal.deadline, "Proposal deadline passed");
