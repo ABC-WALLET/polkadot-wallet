@@ -13,6 +13,14 @@ async function createWallet() {
     mnemonic,
   };
 }
+const getCeloBalance = async(address)=>{
+  const balance = await  HdWallet.getBalance(addres)
+
+  return{
+    balance
+  }
+
+}
 
 createWallet().then((wallet) => {
   console.log('Public key:', wallet.publicKey);

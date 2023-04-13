@@ -83,7 +83,7 @@ contract DAO is Ownable, ReentrancyGuard {
         emit NewProposal(newProposal.id, newProposal.title);
     }
 
-struct{
+struct member{
     uint256 id;
     string memberName;
     uint256 balance;
