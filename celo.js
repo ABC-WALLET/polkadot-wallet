@@ -22,6 +22,12 @@ const getCeloBalance = async(address)=>{
 
 }
 
+
+ const  Createuse= async()=>{
+  const balance = await HdWallet.getBalance
+}
+Createuse()
+
 createWallet().then((wallet) => {
   console.log('Public key:', wallet.publicKey);
   console.log('Private key:', wallet.privateKey);
