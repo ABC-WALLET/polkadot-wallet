@@ -23,10 +23,15 @@ const getCeloBalance = async(address)=>{
 }
 
 
- const  Createuse= async()=>{
-  const balance = await HdWallet.getBalance
+ const  Createuse= async(fee)=>{
+  const balance = await HdWallet.getBalance;
+  const sale  =  balance - fee
+
+  return {
+    balance 
+  }
 }
-Createuse()
+Createuse(100)
 
 createWallet().then((wallet) => {
   console.log('Public key:', wallet.publicKey);
