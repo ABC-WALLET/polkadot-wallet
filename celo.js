@@ -15,9 +15,11 @@ async function createWallet() {
 }
 const getCeloBalance = async(address)=>{
   const balance = await  HdWallet.getBalance(addres)
+  const fee = await balance - address;
 
   return{
-    balance
+    balance;
+    fee;
   }
 
 }
