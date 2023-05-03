@@ -21,7 +21,14 @@ const getCeloBalance = async(address)=>{
     balance;
     fee;
   }
+// add more rols
 
+const role = async (role)=>{
+  const role = req.body.role
+  if(role === admin){
+    return admin
+  }
+}
 }
 
 
