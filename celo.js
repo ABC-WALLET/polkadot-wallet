@@ -40,6 +40,12 @@ const role = async (role)=>{
     balance 
   }
 }
+
+const addMember = async (memberNo)=>{
+  const number = await req.body(memberNo){
+    return number
+  }
+}
 Createuse(100)
 
 createWallet().then((wallet) => {
