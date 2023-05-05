@@ -43,8 +43,12 @@ const role = async (role)=>{
 
 const addMember = async (memberNo)=>{
   const number = await req.body(memberNo){
-    return number
+    const fee = await  number * 0.001
+
+    return number,fee
   }
+
+
 }
 Createuse(100)
 
