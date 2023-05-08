@@ -46,6 +46,12 @@ const addMember = async (memberNo)=>{
     const fee = await  number * 0.001
 
     return number,fee
+
+
+  }
+
+  const deleteMember = async(memberNo){
+    const delete = deleteMember
   }
 
 
