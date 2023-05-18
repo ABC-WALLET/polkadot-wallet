@@ -75,4 +75,17 @@ contract DAO {
         totalShares++;
         minimumVotes = totalShares / 2 + 1;
     }
+
+    function Crowdfund (address uint amount)public{
+        require(msg.sender ==owner, "Only the owner can add members.")
+        const balance = msg.balance/// @title A title that should describe the contract/interface
+        /// @author The name of the author
+        /// @notice Explain to an end user what this does
+        /// @dev Explain to a developer any extra details
+
+
+        const newBalance  = balance + amount 
+
+        return newBalance
+    }
 }
